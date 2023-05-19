@@ -1,0 +1,32 @@
+.cate-image{
+    height: 50px;
+}
+.edit-image{
+    width: 220px;
+}
+.icon-shape {
+    width: 48px;
+    height: 48px;
+    background-position: 50%;
+    border-radius: 0.75rem;
+}
+
+span-logo {
+
+    background: linear-gradient(to right, #fff 20%, #65C7f7 49%, #3e8adb 60%, #fff 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 2s  linear infinite;
+
+}
+
+@keyframes animate {
+    to{
+        background-position:  200% center;
+    }
+
+}
