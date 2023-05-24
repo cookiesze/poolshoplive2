@@ -60,6 +60,7 @@
         "sort-packages": true,
         "platform": {
             "php": "7.1.0"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

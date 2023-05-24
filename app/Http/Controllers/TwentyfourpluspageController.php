@@ -49,7 +49,7 @@ class TwentyfourpluspageController extends Controller
         $user = User::where('member', $member)
         ->first();
 
-        return view('salepage24plus',compact('user'));
+        return view('salepagefoam',compact('user'));
     }
 
     /**

@@ -28,7 +28,7 @@
 
                         
                         <div class="row mb-3">
-                            <label for="member" class="col-md-4 col-form-label text-md-end">{{ __('ชื่อต้นภาษาอังกฤษตามด้วยเบอร์โทร') }}</label>
+                            <label for="member" class="col-md-4 col-form-label text-md-end">{{ __('ชื่อต้นภาษาอังกฤษตามด้วยเบอร์โทร 4 ตัวท้าย') }}</label>
                             <div class="col-md-6">
                                 <input id="member" type="text" class="form-control @error('member') is-invalid @enderror" name="member" value="{{ old('member') }}" required autocomplete="member" autofocus>
 
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="line" class="col-md-4 col-form-label text-md-end">{{ __('Line') }}</label>
+                            <label for="line" class="col-md-4 col-form-label text-md-end">{{ __('Line URL') }}</label>
 
                             <div class="col-md-6">
                                 <input id="line" type="text" class="form-control @error('line') is-invalid @enderror" name="line" value="{{ old('line') }}" required autocomplete="line" autofocus>
@@ -109,7 +109,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address' ) }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -123,17 +123,21 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label class="col-md-4 col-form-label text-md-end" style="color:rgb(252, 59, 91);">** การตั้ง Password</label><br>
+                            <label class="col-md-4 col-form-label text-md-end" style="color:rgb(252, 59, 91);"> ต้องตั้ง 8 ตัว ขึ้นไป แต่ ไม่ควรเกิน 12 </label><br>
+                            <label class="col-md-4 col-form-label text-md-end" style="color:rgb(252, 59, 91);"> มีภาษาอังกฤษ ตัวใหญ่ 1 ตัว และ อักษรพิเศษ 1 ตัว เช่น @ # _' **</label>
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('ตั้ง Password เข้าสู่ระบบ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
+                                <input id="myInput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
+                            
                         </div>
 
                         <div class="row mb-3">
@@ -147,9 +151,20 @@
                         <div class="row mb-0">
                             
                             <div class="col-md-6 offset-md-4">
-                                ใส่ข้อมูลให้ครบทุกช่องก่อนกด <br>
+                                <p style="color:rgb(252, 59, 91);">** ใส่ข้อมูลให้ครบทุกช่องก่อนกด **</p> <br> 
                                 <button class="btn btn-block btn-primary form-control" type="Register" value="Log In" role="button" style="background-color:rgb(252, 59, 91); color:white; ">สมัครเลย!</button><br><br>
+
                             </div>
+                            <script>
+                                function myFunction() {
+                                var x = document.getElementById("myInput");
+                                if (x.type === "password") {
+                                    x.type = "text";
+                                } else {
+                                    x.type = "password";
+                                }
+                                }
+                            </script>
                         </div>
                     </form>
                 </div>

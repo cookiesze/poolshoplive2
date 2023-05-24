@@ -29,13 +29,20 @@
               <li class="nav-header">
                 <p style="color: #fcc100" class="">Systems</p>
               </li>
+              <li class="nav-header">
+              <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+
+                <small class="label red" title="Active"><i class="material-icons" ></i> Sign out</small>
+              </a>
+              </li>
+              <!--
               <li>
                 <a>
                   <span class="nav-caret">
                     <i class="fa fa-chevron-circle-down"></i>
                   </span>
                   <span class="nav-label">
-                    <!--<b class="label rounded label-sm primary"></b>-->
+                    <b class="label rounded label-sm primary"></b>
                   </span>
                   <span class="nav-icon">
                     <i  class="fa fa-youtube-play"></i>
@@ -61,7 +68,7 @@
                     <i class="fa fa-chevron-circle-down"></i>
                   </span>
                   <span class="nav-label">
-                    <!--<b class="label rounded label-sm primary"></b>-->
+                    <b class="label rounded label-sm primary"></b>
                   </span>
                   <span class="nav-icon">
                     <i class="fa fa-youtube-play"></i>
@@ -106,6 +113,7 @@
                     </li>
                 </ul>
               </li>
+              -->
             </ul>
         </nav>
     </div>

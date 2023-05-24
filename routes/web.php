@@ -50,7 +50,7 @@ Route::get('/user/edit/{id}', [App\Http\Controllers\UserController::class, 'edit
 Route::put('/user/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user_update');
 
 Route::get('/salepagebusiness/{member}', [App\Http\Controllers\BusinesspageController::class, 'show'])->name('businesspage_show');
-Route::get('/salepage24plus/{member}', [App\Http\Controllers\TwentyfourpluspageController::class, 'show'])->name('24plus_show');
+Route::get('/salepagefoam/{member}', [App\Http\Controllers\TwentyfourpluspageController::class, 'show'])->name('salepagefoam_show');
 Route::get('/salepageinherb/{member}', [App\Http\Controllers\InherbpageController::class, 'show'])->name('inherb_show');
 Route::get('/salepagepreif/{member}', [App\Http\Controllers\PreifpageController::class, 'show'])->name('Preif_show');
 Route::get('/salepageamino/{member}', [App\Http\Controllers\AminopageController::class, 'show'])->name('Amino_show');
@@ -59,7 +59,11 @@ Route::get('/salepagelotion/{member}', [App\Http\Controllers\LotionpageControlle
 Route::get('/salepagebutter/{member}', [App\Http\Controllers\ButterpageController::class, 'show'])->name('salepagebutter_show');
 Route::get('/salepageshampoo/{member}', [App\Http\Controllers\ShampoopageController::class, 'show'])->name('salepageshempoor_show');
 Route::get('/salepageshower/{member}', [App\Http\Controllers\ShowerpageController::class, 'show'])->name('salepageshower_show');
-
+Route::get('/salepagesunscreen/{member}', [App\Http\Controllers\SunscreenpageController::class, 'show'])->name('salepagesunscreen_show');
+Route::get('/salepageserum/{member}', [App\Http\Controllers\SerumController::class, 'show'])->name('salepageserum_show');
+Route::get('/salepagepromotion/{member}', [App\Http\Controllers\PromotionpageController::class, 'show'])->name('salepagepromotion_show');
+Route::get('/allsalepage/{member}', [\App\Http\Controllers\AllsalepageController::class,'show'])->name('allsalepage_show');
+Route::get('/salepageoffcial/{member}', [\App\Http\Controllers\OfficialsalepageController::class,'show'])->name('salepageoffcial_show');
 
 
 

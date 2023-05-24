@@ -118,16 +118,26 @@
                 <div class="box">
                     <div class="col-md-12" style="background-color: white;">
                         <br>
-                            <a href="{{ url('/salepagebusiness') }}/{{ Auth::user()->member }}" target="_blank"> <img style="width: 100%" src="https://crm.theicongroup.co.th/files/link%20vip/salepage_vip2_1.png?_t=1676453678g"></a>
+                            <a href="{{ url('/allsalepage') }}/{{ Auth::user()->member }}" target="_blank"> <img style="width: 100%" src="{{ asset('assets/onsite/all.png') }}"></a>
                             <br>
                             <div class="button-group" style="display: flex;margin-top: 2px;">
-                                    <input  class="form-control" id="myInput" value="{{ url('/salepagebusiness') }}/{{ Auth::user()->member }}"><input style="margin-left: 10px; margin-right: 10px;" onclick="copyToClipboard(value))" type="button" id="myInput" class="btn btn-info" value="Copy!">
+                                    <input class="form-control" id="myInput" value="{{ url('/allsalepage') }}/{{ Auth::user()->member }}"><input style="margin-left: 10px; margin-right: 10px;" onclick="myFunction()" type="button"class="btn btn-info" value="Copy!">
                             </div>
                                 <script>
-                                    function copyToClipboard(value) {
-                                    document.getElementById(myInput).select();
-                                    document.execCommand('copy');
-                                    }
+                                    function myFunction() {
+                                // Get the text field
+                                var copyText = document.getElementById("myInput");
+
+                                // Select the text field
+                                copyText.select();
+                                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                                // Copy the text inside the text field
+                                navigator.clipboard.writeText(copyText.value);
+
+                                // Alert the copied text
+                                alert("Copied the text: " + copyText.value);
+                                }
                                 </script>
                             <br>
                     </div>
@@ -135,6 +145,7 @@
             </div>
         </div>
     </div>
+    <!--
     <div class="container">
         <div class="row justify-content-center">
             <div class="padding">
@@ -250,6 +261,7 @@
             </div>
         </div>
     </div>
+    -->
 </div>
 
 @endsection
